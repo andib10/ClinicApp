@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Programare noua planificata</title>
+</head>
+<body>
+<p>Draga Dr. <span th:text="${doctorLastName}"></span>,</p>
+<p>Aveti o noua programare planificata.</p>
+<p><b>Pacient:</b> <span th:text="${patientFirstName}"></span> <span th:text="${patientLastName}"></span></p>
+<p><b>Specialitate:</b> <span th:text="${specialty}"></span></p>
+<p><b>Data si ora:</b> <span th:text="${time}"></span></p>
+<p>Multumim!</p>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="images/favicon2.png" type="">
+
+    <title> CliniCare </title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+    <link th:href="@{/css/responsive.css}" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+<div class="hero_area">
+
+
+    <div th:include="fragments :: header"></div>
+</div>
+
+<div class="main-content">
+<section class="department_section layout_padding">
+    <div class="department_container">
+        <div class="container ">
+            <div class="heading_container heading_center">
+                <h2>
+                    Specialități Medicale
+                </h2>
+                <p>
+                    Descoperiți diversitatea noastră de specialități medicale, fiecare având experți dedicați să ofere îngrijire de cea mai înaltă calitate în domeniul lor.
+                </p>
+
+            </div>
+
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-start">
+                            <!-- Image and header aligned to left -->
+                            <div class="pe-3 text-center mr-4"> <!-- Padding-right for spacing -->
+                                <div class="box ">
+                                    <div class="img-box">
+                                        <img src="images/s1.png" alt="">
+                                    </div>
+                                    <div class="detail-box" >
+                                        <h5>Cardiologie</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text aligned to the right -->
+                            <div style="flex-grow: 1;"> <!-- Takes remaining space -->
+                                <br>
+                                <p>
+                                    La clinica noastră, departamentul de cardiologie se remarcă prin excelență în sănătatea inimii, oferind o gamă completă de servicii ce include imagistică diagnostică avansată, tratamente inovatoare și planuri de îngrijire personalizate.
+                                </p><p>
+                                    Cardiologii clinicii sunt specializați în gestionarea unei varietăți de afecțiuni cardiovasculare, de la screening-uri preventive pentru depistarea timpurie a bolilor de inimă până la intervenții complexe pentru condiții acute, având ca obiectiv principal îmbunătățirea rezultatelor pacienților și creșterea calității vieții.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-start">
+                            <div class="pe-3 text-center mr-4">
+                                <div class="box ">
+                                    <div class="img-box">
+                                        <img src="images/s3.png" alt="">
+                                    </div>
+                                    <div class="detail-box" >
+                                        <h5>Hepatologie</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="flex-grow: 1;">
+                                <br>
+                                <p>Departamentul nostru de hepatologie este lider în tratarea bolilor hepatice, oferind instrumente de diagnostic de ultimă generație și terapii avansate pentru afecțiuni precum hepatita, ciroza, cancerul hepatic și boala ficatului gras.</p>
+                                <p>Hepatologii lucrează îndeaproape cu pacienții pentru a dezvolta planuri de tratament personalizate care abordează atât simptomele, cât și cauzele fundamentale ale afecțiunilor hepatice. Aceste planuri sunt susținute de cele mai recente cercetări și practici inovatoare de îngrijire, asigurând astfel cele mai bune rezultate pentru sănătatea pacienților. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <img src="images/docc.png" alt="Descriptive Text" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-start">
+                            <div class="pe-3 text-center mr-4">
+                                <div class="box ">
+                                    <div class="img-box">
+                                        <img src="images/s4.png" alt="">
+                                    </div>
+                                    <div class="detail-box" >
+                                        <h5>Neurologie</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="flex-grow: 1;">
+                                <br>
+                                <p>
+                                    Departamentul de neurologie oferă îngrijire de specialitate pentru o gamă variată de afecțiuni neurologice, de la migrene și epilepsie, până la accident vascular cerebral și scleroză multiplă, folosind cele mai recente tehnici de diagnostic și tratament.
+                                </p>
+                                <p>
+                                    Neurologii sunt dedicați elaborării de planuri de îngrijire personalizate, oferind opțiuni terapeutice avansate și suport continuu pentru a îmbunătăți sănătatea neurologică și a spori calitatea vieții pacienților noștri.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-start">
+                            <div class="pe-3 text-center mr-5">
+                                <div class="box ">
+                                    <div class="img-box">
+                                        <img src="images/s2.png" alt="">
+                                    </div>
+                                    <div class="detail-box" >
+                                        <h5>Medicină de familie</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex-grow: 1;">
+                                <br>
+                                <p>
+                                    Departamentul medicină de familie se angajează să ofere îngrijire completă pentru perosoane de toate vârstele și genurile, acoperind o gamă largă de afecțiuni. Ne concentrăm pe o abordare ce include îngrijirea preventivă, controalele de rutină, imunizări și gestionarea bolilor acute și cronice.
+                                </p>
+                                <p>
+                                    Medicii de familie dezvoltă relații durabile cu pacienții, oferind tratamente personalizate și educație continuă pentru sănătate, cu scopul de a promova bunăstarea generală și de a preveni problemele de sănătate viitoare.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <img src="images/famdoc.png" alt="Descriptive Text" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-start">
+                            <div class="pe-3 text-center mr-4">
+                                <div class="box ">
+                                    <div class="img-box">
+                                        <img src="images/s5.png" alt="">
+                                    </div>
+                                    <div class="detail-box" >
+                                        <h5>Psihiatrie</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex-grow: 1;">
+                                <br>
+                                <p>
+                                    Departamentul de psihiatrie se angajează să îmbunătățească sănătatea mentală prin tratamente corepunzătoare, abordând o gamă largă de tulburări psihiatrice, cum ar fi depresia, anxietatea, tulburarea bipolară și schizofrenia.
+                                <p>Psihiatrii adoptă o abordare complexă, integrând gestionarea medicației, psihoterapia și planuri de suport personalizate pentru a promova bunăstarea mentală și recuperarea, într-un mediu confidențial și de susținere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<div th:include="fragments :: footer"></div>
+
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+
+</body>
+
+</html>

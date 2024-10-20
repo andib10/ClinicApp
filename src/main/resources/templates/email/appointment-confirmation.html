@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmarea Programarii</title>
+</head>
+<body>
+<p>Draga <span th:text="${firstName}"></span>,</p>
+<p>Ai planificat cu succes consultatia.</p>
+<p><b>Specialitate:</b> <span th:text="${specialty}"></span></p>
+<p><b>Doctor:</b> <span th:text="${doctorFirstName}"></span> <span th:text="${doctorLastName}"></span></p>
+<p><b>Data si ora:</b> <span th:text="${time}"></span></p>
+<p>Multumim!</p>
+</body>
+</html>

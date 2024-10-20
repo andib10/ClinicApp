@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="images/favicon2.png" type="">
+
+    <title> ClinicCare </title>
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+<div class="hero_area">
+
+
+    <div th:include="fragments :: header"></div>
+</div>
+
+
+<!-- contact section -->
+<div class="main-content">
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Informații de contact
+            </h2>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container mt-5 contact-container">
+        <div class="contact-section">
+            <p class="contact-title">Call Center</p>
+            <div class="contact-info">
+                <p><i class="fa fa-phone" aria-hidden="true"></i> <span>+01 1234567890</span></p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:medcliniccare@gmail.com">medcliniccare@gmail.com</a></p>
+                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Luni - Vineri: 08:00 - 20:00</p>
+                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duminică: 08:00 - 15:00</p>
+            </div>
+        </div>
+        <hr>
+        <div class="container contact-section">
+            <p class="contact-title">Sediul Clinicare</p>
+            <div class="contact-info">
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Str. Academiei nr. 14, București</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> <span>+01 5678901234</span></p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:medcliniccare@gmail.com">medcliniccare@gmail.com</a></p>
+                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Luni - Vineri: 08:00 - 18:00</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container mt-5" style="max-width: 800px;">
+    <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45602.25108648336!2d26.03149992033279!3d44.4097585968551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff473869f53f%3A0xee62eda4d786c152!2sUniversitatea%20din%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1719495411311!5m2!1sro!2sro" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+
+
+
+</section>
+</div>
+
+<div th:include="fragments :: footer"></div>
+
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cont Creat</title>
+</head>
+<body>
+<p>Draga Dr. <span th:text="${firstName}"></span> <span th:text="${lastName}"></span>,</p>
+<p>Contul tau a fost creat cu succes!</p>
+<ul>
+    <li><b>Username:</b> <span th:text="${userName}"></span></li>
+    <li><b>Email:</b> <span th:text="${email}"></span></li>
+</ul>
+<p>Parola dumneavoastra initiala este 'fun123', va rugam sa o schimbati dupa autentificare.</p>
+<p>Multumim!</p>
+</body>
+</html>

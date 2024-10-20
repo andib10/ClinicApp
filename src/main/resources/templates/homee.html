@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="images/favicon2.png" type="">
+
+    <title> CliniCare </title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+    <link th:href="@{/css/responsive.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div class="hero_area">
+
+    <div class="hero_bg_box">
+        <img src="images/hero-bg.png" alt="">
+    </div>
+
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" th:href="@{/homee}">
+            <span>
+              CliniCare
+            </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/homee}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/specialtiesPage}">Specialități</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/doctorsPage}">Doctori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/aboutPage}"> Despre noi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/contactPage}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="${session.user != null} ?
+                (${session.user.role.name == 'ROLE_DOCTOR'} ? '/doctor' :
+                (${session.user.role.name == 'ROLE_PATIENT'} ? '/patient' :
+                (${session.user.role.name == 'ROLE_ADMIN'} ? '/admin' : '/showMyLoginPage')))
+                : '/showMyLoginPage'">
+                                <i class="fa fa-user" aria-hidden="true" style="font-size: 35px;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- banner section -->
+    <section class="slider_section ">
+        <div id="customCarousel1">
+            <div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="detail-box">
+                                    <h1>
+                                        ÎN TOTALITATE DEDICAȚI SĂNĂTĂȚII TALE
+                                    </h1>
+                                    <p>
+                                        Sănătatea ta este prioritatea noastră. Experimentează îngrijire personalizată de la echipa noastră de profesioniști din domeniul sănătății. Oferim soluții complete adaptate nevoilor tale individuale într-un mediu prietenos și de susținere.
+                                    </p>
+                                   <!-- <div class="btn-box">
+                                        <a th:href="@{/showMyLoginPage}" class="btn1">
+                                            Appointment
+                                        </a>
+                                    </div>-->
+                                    <div class="btn-box">
+                                        <a th:href="${session.user != null} ?
+                (${session.user.role.name == 'ROLE_DOCTOR'} ? '/doctor' :
+                (${session.user.role.name == 'ROLE_PATIENT'} ? '/patient' :
+                (${session.user.role.name == 'ROLE_ADMIN'} ? '/admin' : '/showMyLoginPage')))
+                : '/showMyLoginPage'" class="btn1">
+                                            Programează-te!
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+<!-- department section -->
+
+<section class="department_section layout_padding">
+    <div class="department_container">
+        <div class="container ">
+            <div class="heading_container heading_center">
+                <h2>
+                    Specialități Medicale
+                </h2>
+                <p>
+                    Explorează gama noastră variată de specialități medicale, fiecare coordonată de experți dedicați să ofere îngrijire de ceea mai înaltă calitate.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="images/s1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Cardiologie
+                            </h5>
+                            <p>
+                                Echipa noastră de cardiologie oferă îngrijire de specialitate pentru toate afecțiunile legate de inimă, cu opțiuni avansate de tratament.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="images/s2.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Medicină de familie
+                            </h5>
+                            <p>
+                                Specialiștii noștri în medicină de familie oferă îngrijire cuprinzătoare adaptată pacienților de toate vârstele.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="images/s3.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Hepatologie
+                            </h5>
+                            <p>
+                                Specializată în sănătatea ficatului, echipa noastră de hepatologie folosește cele mai recente tratamente pentru gestionarea bolilor hepatice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="images/s4.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Neurologie
+                            </h5>
+                            <p>
+                                Departamentul nostru de neurologie este dedicat diagnosticării și tratării eficiente a tulburărilor neurologice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a th:href="@{/specialtiesPage}">
+                    Vezi tot
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- about section -->
+
+<section class="about_section layout_margin-bottom">
+    <div class="container  ">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="img-box">
+                    <img src="images/about-img.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <div class="heading_container">
+                        <h2>
+                            Despre <span>Noi</span>
+                        </h2>
+                    </div>
+                    <p>
+                        Bine ați venit la clinica noastră, un loc unde prioritizăm sănătatea și bunăstarea dumneavoastră mai presus de orice. Echipa noastră de profesioniști din domeniul sănătății este gata să vă ofere îngrijire de cea mai înaltă calitate într-un mediu prietenos și de susținere. De la controale de rutină la tratamente specializate, oferim o gamă completă de servicii pentru a răspunde nevoilor dumneavoastră. Clinica noastră este echipată cu cea mai modernă tehnologie medicală pentru a ne asigura că fiecare tratament este administrat cu precizie și grijă.
+                     </p>
+                    <a th:href="@{/aboutPage}">
+                        Mai mult
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- doctor section -->
+
+<section class="doctor_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Echipa Doctorilor
+            </h2>
+            <p class="col-md-10 mx-auto px-0">
+                Faceți cunoștință cu echipa noastră de doctori dedicați, fiecare având experiența și cunoștințele necesare pentru a vă asigura că primiți cea mai bună îngrijire posibilă.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="images/d1.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Dr. Ioana Radu
+                        </h5>
+                        <h6 class="">
+                            Cardiolog
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="images/d2.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Dr. Andrei Petrescu
+                        </h5>
+                        <h6 class="">
+                            Neurolog
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="images/d3.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Dr. Elena Popescu
+                        </h5>
+                        <h6 class="">
+                            Medic de familie
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-box">
+            <a th:href="@{/doctorsPage}">
+                Vezi tot
+            </a>
+        </div>
+    </div>
+</section>
+
+<br><br><br>
+
+<!-- client section -->
+
+<section class="client_section layout_padding-bottom">
+    <div class="container">
+        <div class="heading_container heading_center ">
+            <h2>
+                Testimoniale
+            </h2>
+        </div>
+        <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-11 col-lg-10 mx-auto">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="images/client2.png" alt="" />
+                                </div>
+                                <div class="detail-box">
+                                    <div class="name">
+                                        <h6>
+                                            Mihai Georgescu
+                                        </h6>
+                                    </div>
+                                    <p>
+                                        Am fost foarte impresionat de profesionalismul și eficiența întregii echipe de la clinică. Au făcut o situație care de obicei este stresantă mult mai ușoară prin comunicarea lor clară și modul de abordare. M-am simțit foarte liniștit știind că sunt pe mâini bune.  </p>
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-11 col-lg-10 mx-auto">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="images/client4.png" alt="" />
+                                </div>
+                                <div class="detail-box">
+                                    <div class="name">
+                                        <h6>
+                                            Gabriela Stan
+                                        </h6>
+                                    </div>
+                                    <p>
+                                        Din momentul în care am intrat în clinică, m-am simțit binevenită. Personalul a fost atent, iar doctorii au ascultat cu atenție preocupările mele. Datorită profesionalismului lor, sunt acum pe drumul spre recuperare. Nu le pot mulțumi suficient pentru îngrijirea excelentă pe care am primit-o!    </p>
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-11 col-lg-10 mx-auto">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="images/client3.png" alt="" />
+                                </div>
+                                <div class="detail-box">
+                                    <div class="name">
+                                        <h6>
+                                            Florin Grigorescu
+                                        </h6>
+                                    </div>
+                                    <p>
+                                        Domnul doctor neurolog nu doar că era foarte bine informat, dar era și cu adevărat înțelegător. Planul de tratament a fost adaptat nevoilor mele, ducând la îmbunătățiri semnificative ale sănătății mele. Recomand cu mare căldură această clinică oricui caută îngrijire medicală de excepție.    </p>
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel_btn-container">
+                <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer section -->
+<footer class="footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 footer_col">
+                <div class="footer_contact">
+                    <h4>
+                        Contactați-ne
+                    </h4>
+                    <div class="contact_link_box">
+                        <a href="/contactPage">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Str. Academiei nr. 14, București</span>
+                        </a>
+                        <a href="/contactPage">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>+01 1234567890</span>
+                        </a>
+                        <a href="mailto:medcliniccare@gmail.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>medcliniccare@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 footer_col">
+                <div class="footer_detail">
+                    <h4>
+                        Program
+                    </h4>
+                    <p>
+                        Clinica noastră vă primește de la ora <strong>9 AM </strong> la <strong>6 PM</strong>. Ne bucurăm să vă oferim sprijinul necesar pentru sănătatea dumneavoastră în acest interval orar.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mx-auto footer_col">
+                <div class="footer_link_box">
+                    <h4>
+                        Links
+                    </h4>
+                    <div class="footer_links">
+                        <a class="" th:href="@{/homee}">
+                            Home
+                        </a>
+                        <a class="" th:href="@{/aboutPage}">
+                            Despre noi
+                        </a>
+                        <a class="" th:href="@{/specialtiesPage}">
+                            Specialități
+                        </a>
+                        <a class="" th:href="@{/doctorsPage}">
+                            Doctori
+                        </a>
+                        <a class="" th:href="@{/contactPage}">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
